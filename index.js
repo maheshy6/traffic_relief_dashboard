@@ -6,7 +6,7 @@ import userRoute from "./router/user.router.js";
 const app = express()
 app.use(express.json())
 app.use("/api/users",userRoute)
-const port = process.env.port || 2020
+const port = process.env.PORT || 2020
 app.listen(port, async()=>{
     await mongoose.connect(process.env.MONGODB_CLOUD_URL)
     console.log("connected to mongodb atlas")
