@@ -3,11 +3,11 @@ import "dotenv/config"
 import mongoose from "mongoose";
 import userRoute from "./router/user.router.js";
 import cors from "cors"
-
+app.use(cors());
 const app = express()
 app.use(express.json())
 app.use("/api/users",userRoute)
-app.use(cors());
+
 // app.use(cors({
 //     origin:'http://localhost:5174'
 // }))
