@@ -14,7 +14,7 @@ app.use("/api/users",userRoute)
 const port = process.env.PORT || 2020
 app.listen(port, async()=>{
     await mongoose.connect(process.env.MONGODB_CLOUD_URL)
-    console.log("connected to mongodb atlas")
+    console.log("connected to mongodb atlas db")
     console.log(`server started at port http://localhost:${port}`)
 })
 
