@@ -7,9 +7,10 @@ import cors from "cors"
 const app = express()
 app.use(express.json())
 app.use("/api/users",userRoute)
-app.use(cors({
-    origin:'http://localhost:5174'
-}))
+app.use(cors());
+// app.use(cors({
+//     origin:'http://localhost:5174'
+// }))
 const port = process.env.PORT || 2020
 app.listen(port, async()=>{
     await mongoose.connect(process.env.MONGODB_CLOUD_URL)
